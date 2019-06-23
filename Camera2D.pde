@@ -2,8 +2,6 @@ class Camera2D{
   float x;
   float y;
   float scale;
-  float lastMouseX;
-  float lastMouseY;
   char panKey;
   char lastKey;
   Boolean isPanKey;
@@ -33,11 +31,9 @@ class Camera2D{
     }
     
     if(isPanKey && mousePressed && mouseButton == LEFT){
-      x += mouseX-lastMouseX;
-      y += mouseY-lastMouseY;
+      x += mouseX-pmouseX;
+      y += mouseY-pmouseY;
     }
-    lastMouseX = mouseX;
-    lastMouseY = mouseY;
   }
   
   void update(){  

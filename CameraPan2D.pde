@@ -6,7 +6,8 @@ void setup(){
 }
 
 void draw(){
-  background(200);
   camera.run();
+  
+  background(200);
   ellipse(0,0,100,100);
 }
