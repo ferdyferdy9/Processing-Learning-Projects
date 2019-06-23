@@ -36,8 +36,8 @@ class Camera2D{
     }
     
     if(isPanKey && mousePressed && mouseButton == LEFT){
-      x += mouseX-pmouseX;
-      y += mouseY-pmouseY;
+      x += (mouseX-pmouseX)/scale;
+      y += (mouseY-pmouseY)/scale;
     }
   }
   
