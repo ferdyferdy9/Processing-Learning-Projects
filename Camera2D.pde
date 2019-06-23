@@ -42,7 +42,9 @@ class Camera2D{
   }
   
   void update(){
-    translate(x,y);
+    translate(width/2,height/2);
     scale(scale);
+    translate(-width/2,-height/2);
+    translate(x,y);
   }
 }
