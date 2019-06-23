@@ -14,6 +14,11 @@ class Camera2D{
     isPanKey = false;
   }
   
+  void scrollMode(MouseEvent e){
+    if(isPanKey)
+      scale -= e.getCount()*0.1*scale;
+  }
+  
   void run(){
     input();
     update();
@@ -36,7 +41,7 @@ class Camera2D{
     }
   }
   
-  void update(){  
+  void update(){
     translate(x,y);
     scale(scale);
   }
