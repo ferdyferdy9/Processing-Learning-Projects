@@ -14,6 +14,12 @@ class Camera2D{
     isPanKey = false;
   }
   
+  PVector transMouse(float x, float y){
+    x = (x- width/2)/scale +  width/2 - this.x;
+    y = (y-height/2)/scale + height/2 - this.y;
+    return new PVector(x,y);
+  }
+  
   void scrollMode(MouseEvent e){
     if(isPanKey)
       scale -= e.getCount()*0.1*scale;
