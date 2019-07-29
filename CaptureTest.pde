@@ -58,6 +58,9 @@ void keyPressed() {
   if (key == 'b') {
     isBWMode = !isBWMode;
   }
+  if (key == 's') {
+    save("data.png");
+  }
 }
 
 void flashMode(){
