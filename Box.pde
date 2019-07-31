@@ -5,6 +5,10 @@ class Box{
     data = new int[size][size];
   }
   
+  Box(int w, int h){
+    data = new int[h][w];
+  }
+  
   void set(int x, int y, int value){
     data[y][x] = (value == 0) ? 0 : 1;
   }

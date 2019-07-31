@@ -50,8 +50,26 @@ class BoxFactory{
     return box;
   }
   
-  Box createAnswer(){
-    // TODO
-    return null;
+  ArrayList<Integer> createAnswer(){
+    if(!img.isLoaded())
+      img.loadPixels();
+    
+    ArrayList<Integer> ans = new ArrayList<Integer>();
+    
+    for(int y=r; y < h-r*2; y++){
+      for(int x=r; x < w-r*2; x++){
+        int loc = x + y*w;
+        int r = (int) red(img.pixels[loc]);
+        int g = (int) blue(img.pixels[loc]);
+        int b = (int) green(img.pixels[loc]);
+        
+        if(r == 0 && g == 0 && b == 0)
+          continue;
+        
+        ans.add(r==0 ? 1 : 0);
+      }
+    }
+    
+    return ans;
   }
 }
