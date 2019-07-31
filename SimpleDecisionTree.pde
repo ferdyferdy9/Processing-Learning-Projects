@@ -6,7 +6,11 @@ void setup() {
   size(180,320);
   img = loadImage("set1_ans.png");
   
-  bf = new BoxFactory(img);
+  bf = new BoxFactory();
+  bf.setImg(img);
+  
+  ArrayList<Box> b = bf.createSamples();
+  
   noCursor();
 }
 
