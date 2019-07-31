@@ -1,5 +1,5 @@
-PImage img;
 BoxFactory bf;
+PImage img;
 int x, y;
 
 void setup() {
@@ -8,8 +8,6 @@ void setup() {
   
   bf = new BoxFactory();
   bf.setImg(img);
-  
-  ArrayList<Box> b = bf.createSamples();
   
   noCursor();
 }
@@ -32,7 +30,7 @@ void draw() {
   }
 }
 
-void keyPressed(){
+void mousePressed(){
   Box b = bf.createSample(x,y);
   println(b);
 }
