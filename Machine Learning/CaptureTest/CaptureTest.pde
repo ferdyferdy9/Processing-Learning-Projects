@@ -4,6 +4,8 @@ IPCapture cam;
 Boolean isFlashMode = false;
 Boolean isBWMode = false;
 
+int i=0;
+
 void setup() {
   size(640,480);
   cam = new IPCapture(this, "http://192.168.1.243:8080/video", "", "");
@@ -59,7 +61,7 @@ void keyPressed() {
     isBWMode = !isBWMode;
   }
   if (key == 's') {
-    save("data.png");
+    save("data"+i+".png");
   }
 }
 
