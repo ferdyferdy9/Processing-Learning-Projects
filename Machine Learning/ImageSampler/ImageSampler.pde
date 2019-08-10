@@ -4,7 +4,7 @@ int x, y;
 
 void setup() {
   size(180,320);
-  img = loadImage("set1_ans.png");
+  img = loadImage("../_data/set1_ans.png");
   
   bf = new BoxFactory();
   bf.setImg(img);
