@@ -3,7 +3,7 @@ World world;
 void setup(){
   size(600,600);
   world = new World();
-  
+  frameRate(60);
 }
 
 void draw(){

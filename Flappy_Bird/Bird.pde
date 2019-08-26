@@ -32,8 +32,8 @@ class Bird extends PVector{
     
     float theta = map(vel.y, -20, 20, -QUARTER_PI, QUARTER_PI);
     
-    translate(this.x,this.y);
-    rotate(theta);
+    translate(x,y);
+    Flappy_Bird.this.rotate(theta);
     
     imageMode(CENTER);
     image(sprite, 0,0, w,h);

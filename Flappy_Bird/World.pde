@@ -11,7 +11,7 @@ class World{
     
     float offset = 300;
     
-    for(int i=0; i<100; i++){
+    for(int i=0; i<10; i++){
       float h = random(350,height-100);
       
       pipes.add(new Pipe(width+i*offset, 0, 100, h-distance)); 
