@@ -2,6 +2,10 @@ class Follower extends Boid{
   Follower(){}
   Follower(float x, float y){super(x,y);}
   
+  void applyBehaviour(){
+    acc.add(followPath());
+  }
+  
   void display(){
     pushMatrix();
     fill(100);
